@@ -1,0 +1,28 @@
+<div id="custom">
+  <h1>WF table</h1>
+
+  <div style="width: 170px; display:inline-block;"> 
+    <span style="display: inline; float:left;"> 
+      <wf-button :title="Add" :primary="true" @click="incCounter"></wf-button>
+    </span>  
+    <span style="display: inline; float:right;"> 
+      <wf-button :title="Delete" :secondary="true" @click="decCounter"></wf-button>
+    </span>  
+  </div>
+
+
+  <div :for="item in items">
+    <div>
+      {{ item.id }}. {{item.title}} {{ item.child.id}}, count: {{ count }}
+    </div>
+  </div>
+
+  <br><br>
+
+  <div :for="i in item">
+    <div>
+      {{ i }}
+    </div>
+  </div>
+
+</div>

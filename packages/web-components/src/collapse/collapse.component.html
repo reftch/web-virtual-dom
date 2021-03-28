@@ -1,0 +1,11 @@
+<div class="collapse">  
+  <div class="collapse-title-bar">
+    <span :if="!isHidden"class="button icon icon-expand" ></span>  
+    <span :if="isHidden"class="button icon icon-collapse" ></span>  
+    <span class="collapse-title">{{title}}</span>
+  </div>
+
+  <div :if="!isHidden" class="collapse-body">
+    <slot name="content"></slot>
+  </div>
+</div>

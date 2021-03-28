@@ -1,0 +1,43 @@
+@use '../colors';
+
+.splitter {
+  flex-direction: row;
+
+  &-bar {
+    flex: 0 0 auto;
+    background-color: var(--background-logo);
+  }
+
+  & > &-bar {
+    width: 8px;
+    box-shadow: -1px 0px 3px 0px rgba(8, 51, 96, 0.25) inset;
+    cursor: col-resize;
+    display: flex;
+  }
+
+  & &-bar:hover {
+    background-color: var(--background-sidebar-active);
+  }
+
+  & &-component {
+    flex-flow: column nowrap;
+  }
+
+  &-component {
+    flex: 1 1 0;
+    overflow: hidden;
+    display: flex;
+  }
+
+  &-component > * {
+    flex: 1 1 0;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: inherit;
+    flex: 1 1 0;
+    box-sizing: border-box;
+    align-items: stretch;
+  }
+}

@@ -1,0 +1,44 @@
+@use '../colors';
+
+.sidebar {
+  margin-top: 5px;
+  width: 100%;
+  background-color: var(--background);
+  height: calc(100vh - 110px);
+
+  &-section {
+    padding: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    border-right: 3px solid inherit;
+  }
+
+  &-icon {
+    padding: 5px;
+  }
+
+  &-title {
+    padding-left: 5px;
+  }
+
+  &-section:hover {
+    background-color: var(--hover);
+    border-right: 3px solid var(--separator-color);
+    @include regular-shadow;
+  }
+
+  &-active {
+    background: var(--background-selected);
+    border-right: 3px solid var(--selected) !important;
+    @include regular-shadow;
+  }
+
+}
+
+.side-nav {
+  // @include regular-shadow;
+  li {
+    cursor: pointer;
+    color: #e6ebf1;
+  }
+}

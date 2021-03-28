@@ -1,0 +1,89 @@
+@use '../colors';
+
+.explorer {
+  position: relative;
+  top: 40px;
+  color: var(--primary);
+  background-color: var(--background-sidebar);
+
+  &-container {
+    display: flex;
+    flex-direction: row;
+  
+    &-controls {
+       height: 100vh;
+    }
+  }
+
+  .side-nav {
+    display: block;
+    width: 60px;
+    z-index: 2;
+    background-color: var(--background-logo);
+
+    &-icon {
+      padding: 11px;
+      transform: scale(1.5);
+    }
+    @include regular-shadow;
+  }
+
+  &-dbe {
+    font-weight: 600;
+    color: var(--selected);
+  }
+
+  &-viewport {
+    margin: 20px 0 0 70px;
+    width: 100%;
+    height: calc(100vh - 110px);
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .icon-folder {
+      color: var(--selected);
+    }
+
+    &-folder {
+      padding: 2px 0px 2px 10px;
+      margin: 0px 10px 0px 10px;
+      display: block;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--background);
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-title {
+      position: relative;
+      left: 5px;
+    }
+
+    &-folder:hover {
+      background: var(--background-sidebar-active);
+      border-radius: 4px;
+    }
+  
+    &-file {
+      color: var(--primary);
+      position: relative;
+      font-weight: 400;
+      display: block;
+      cursor: pointer;
+      padding: 2px 0px 3px 27px;
+      margin: 0px 10px 0px 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-file:hover {
+      background: var(--background-sidebar-active);
+      border-radius: 4px;
+    }
+  }
+
+}

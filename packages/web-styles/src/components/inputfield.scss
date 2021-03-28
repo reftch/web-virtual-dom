@@ -1,0 +1,54 @@
+@use '../colors';
+
+.inputfield {
+  position: relative;
+  user-select: none;
+  // @include small-shadow;
+
+  &-label {
+    font-weight: 600;
+    font-size: 1.1em;
+  }
+
+  &-hint {
+    padding: 3px 0px 3px 0px;
+    color: var(--hint);
+  }
+
+  &-form-row {
+    white-space: nowrap;
+    padding: 0em;
+  }
+
+  &-form-row > input {
+    width: 100%;
+    color: var(--color);
+    border: 1px solid var(--selected);
+    border-radius: 3px;
+    color: var(--color);
+    background-color: var(--background-input);
+  }
+
+  &-form-row > input,
+  &-form-row > button {
+    padding: 0.4em;
+  }
+
+  &-form-row > input:hover {
+    @include regular-shadow;
+  }
+
+  &-disabled &-form-row > input {
+    border: 1px solid var(--separator-color);
+    color: var(--hint);
+  }
+
+  &-required &-form-row > input {
+    // border: 1px solid var(--red);
+    color: var(--hint);
+  }
+
+  &-disabled &-form-row > input:hover {
+    @include none-shadow;
+  }
+}

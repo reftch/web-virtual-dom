@@ -1,0 +1,108 @@
+@use '../colors';
+
+$width: 800px;
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 101;
+
+  // display: flex;
+
+  &-container {
+    position: absolute;
+    top: calc((100vh - 400px)/2);
+    left: calc((100vw - #{$width})/2);
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    min-width: $width;
+    margin: 2% auto;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: var(--primary);
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-flow: row;
+    min-height: 260px;
+    width: 560px;  
+
+  
+    @include big-shadow;
+  }
+
+  &-left {
+    display: flex;
+    // justify-content: flex-start;
+    // width: 200px;
+    text-align: center;
+    font-size: 140px;
+    // color: white;
+    line-height: 260px;
+    background-color: #0399f7;
+  }
+
+  &-left::before {
+    height: 100%;
+    width: 250px;
+    font-family: "Icons";
+    text-align: center;
+    font-size: 130px;
+    color: white;
+    line-height: 260px;
+
+    font-family: "Icons";
+    content: "\e99b";
+  }
+
+  &-right {
+    margin: 20px;
+    // margin: 0;
+    width: 100%;
+  }
+
+  &-title {
+    margin: 0;
+    padding: 0 0px 20px 0px;
+    // border-bottom: 1px #ccc solid;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  &-content {
+    display: block;
+    margin: 20px 0 20px 0px;
+    font-size: 18px;
+    line-height: 22px;
+    width: 500px !important;
+  }
+  
+  &-close {
+    margin-right: 5px;
+    float: right;
+    transform: scale(1.5);
+  }
+  
+  &-footer {
+    // border-top: 1px #ccc solid;
+    display: flex;
+    align-items: center;
+    // flex: 1 1 auto;
+    height: 100px;
+    justify-content: flex-end;
+    padding-top: 80px;
+    // padding-right: 10px;      
+  }
+
+  &-button {
+    margin-right: 0px;
+    margin-left: 20px;
+  }
+}
+

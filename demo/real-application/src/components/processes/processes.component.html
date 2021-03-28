@@ -1,0 +1,22 @@
+<div>
+  <h2>Processes</h2>
+  <div style="width: 250px; display:inline-block;"> 
+    <span style="display: inline; float:left;"> 
+      <wf-button :title="Increment" :primary="true" @click="incCounter"></wf-button> 
+    </span>  
+    <span style="display: inline; float:left;"> 
+      <wf-button :title="Decrement" :secondary="true" @click="decCounter"></wf-button> 
+    </span>  
+  </div>
+
+  <div>
+    <wf-collapse :title="Collapse Element" :is-hidden="is-enabled" @click="toggle"></wf-collapse>
+    <div :if="isEnabled" class="collapse collapse-body">
+      <div>
+        State management count: <span style="padding-left: 5px;"> {{ count }}</span>
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,49 @@
+@use '../colors';
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background);
+
+  &-controls {
+    margin-top: 5px;
+    width: 200px;
+    min-width: 200px;
+    height: calc(100vh - 110px);
+    @include regular-shadow;
+  }
+
+  // &-form {
+  //   padding: 20px;
+  //   h2 {
+  //     font-size: 22px;
+  //     font-weight: 600;
+  //     padding-bottom: 15px;
+  //   }
+  // }
+
+  // &-description1 {
+  //   // width: 800px;
+  //   background-color: var(---background-splitter);
+  //   padding: 0px 0px 20px 0px;
+  //   color: var(--hint);
+  //   &-icon {
+  //     padding-right: 5px;
+  //   }
+  // }
+
+  // &-parameter {
+  //   padding-bottom: 30px;
+  // }
+
+  // &-label {
+  //   font-weight: 600;
+  //   font-size: 1.1em;
+  // }
+
+  // &-hint {
+  //   padding: 5px 0px 5px 0px;
+  //   color: var(--hint);
+  // }
+
+}

@@ -1,0 +1,71 @@
+@use '../colors';
+
+.tabs {
+  white-space: nowrap;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  background: var(--background-sidebar);
+  color: var(--primary);
+
+  &-shadow {
+    @include big-shadow;
+  }
+
+  &-subheader {
+    display: flex;
+    overflow: hidden;
+    flex: 0 1 auto;
+    align-items: center;
+  }
+
+  &-scroller {
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+
+  &-list {
+    display: flex;
+    flex: 1 0 auto;
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    // border-left: 1px solid var(--hover);
+    // border-right: 1px solid var(--hover);
+  }
+
+  
+  &-text {
+    padding: 10px 12px 9px 10px;
+    cursor: pointer;
+    // font-size: 14px;
+    font-weight: 600;
+
+    
+    &-icon {
+      position: relative;
+      top: 2px;
+      left: 5px;
+      padding: 1px 2px 0px 2px;
+      border-radius: 2px;
+    }
+
+    &-icon:hover {
+      background-color: var( --background-sidebar-active);
+      @include small-shadow;  
+    }
+  }
+  
+  &-text-active {
+    background: var(--background-sidebar-active);
+    border-bottom: 4px solid var(--primary);
+  }
+
+  &-text:hover {
+    background: var(--background-logo);
+    // background-color: var(--hover);
+    border-bottom: 4px solid var(--separator-color);
+  }
+}

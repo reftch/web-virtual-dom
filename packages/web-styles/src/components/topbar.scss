@@ -1,0 +1,107 @@
+@use '../colors';
+
+.topbar {
+  white-space: nowrap;
+  width: 100%;
+  position: fixed;
+  left: 0px;  
+  height: 40px;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  z-index: 100;
+  color: var(--primary);
+
+  .logo {
+    cursor: pointer;
+    position: relative;
+    top: 6px;
+    left: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--primary);
+  }
+
+  &-title {
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    left: 210px;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--red);
+  }
+
+  &-project {
+    padding: 0 10px 0 5px;
+    font-weight: 600;;
+  }
+
+  &-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 42px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--background-logo);
+  }
+
+  &-left {
+    width: 800px;
+    display: flex;
+    align-items: center;
+    // flex: 1 1 auto;
+    height: 100%;
+    justify-content: flex-start;
+  
+    &-icon-logo {
+      cursor: pointer;
+      background-size: 35px 35px;
+      width: 35px;
+      height: 35px;
+      display: block;
+      // margin-left: 5px;
+    }
+
+    &-title {
+      margin-left: 10px;
+      font-weight: 600;
+      font-size: 1.2em;
+      min-width: 150px;
+      &-name {
+        font-weight: 600;
+        padding-left: 5px;
+        padding-right: 5px;
+        color: var(--red);
+      }
+    }
+
+    &-project {
+      font-weight: 600;
+      padding: 3px;
+    }
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    height: 100%;
+    justify-content: flex-end;
+    width: 200px;
+    padding-right: 10px;  
+  }
+    
+}
+
+/** TODO: need to add some compact elements instead these */
+@media screen and (max-width: 800px) {
+  .topbar {
+      display: none;
+  }
+}
+

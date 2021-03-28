@@ -1,0 +1,259 @@
+@use '../colors';
+
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  
+  &-cell {
+    padding-right: 20px;
+  }
+
+  & label {
+    margin: 5px 10px 5px 0;
+  }
+  
+}
+
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+  
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.form {
+  padding: 15px 10px 10px 20px;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  &-description {
+    font-size: 0.9em;
+    margin: 20px 0 20px 0;
+    padding: 10px 10px;
+    background-color: var(--background-selected);
+    background-color: var(--background-description);
+    color: var(--hint);
+    width: 100%;;
+    white-space:nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &-icon {
+      padding-right: 5px;
+    }
+  }
+
+  &-label {
+    font-weight: 600;
+    font-size: 1.1em;
+  }
+
+  &-hint {
+    padding: 5px 0px 5px 0px;
+    color: (--hint);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &-row {
+    display: flex;
+    flex: 1 1 auto;
+    margin: 20px 0 0px 0;
+    // padding: 20px 0 20 0px;
+  }
+
+  &-row-left {
+    display: flex;
+    // align-items: center;
+    // flex: 1 1 ;
+    height: 100%;
+    justify-content: flex-start;
+  }
+
+  &-row-right {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  // &-parameter {
+  //   padding: 15px 0;
+  // }
+
+  &-cell {
+    padding-right: 20px;
+  }
+
+  &-file-explorer {
+    padding: 10px 0 10px 0;
+    margin: 15px 0 0px 0;
+    border: 1px solid var(--selected);
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+
+    .explorer-viewport-folder {
+      color: var(--color);
+      .icon-folder {
+        color: var(--selected);
+      }
+      &:hover {
+        background-color: var(--background-description);
+      }
+    }
+    .explorer-viewport-file {
+      color: var(--color);
+      &:hover {
+        background-color: var(--background-description);
+      }
+    }
+  }
+}
+
+.row {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  
+  &-col-250 {
+    float: left;
+    width: 250px;
+    // margin: 15px 15px 0 0;
+  }
+  
+  &-pad-20 {
+    float: left;
+    width: 20%;
+    margin: 20px 20px 0 0;
+  }
+
+  &-col-25 {
+    float: left;
+    width: 23%;
+    margin: 20px 20px 0 0;
+  }
+
+  &-col-30 {
+    float: left;
+    width: 28%;
+    margin: 20px 20px 0 0;
+  }
+
+  &-col-40 {
+    float: left;
+    width: 40%;
+    min-width: 200px;
+    margin: 20px 20px 0 0;
+  }
+
+  &-col-50 {
+    float: left;
+    width: 50%;
+    min-width: 200px;
+    margin: 20px 20px 0 0;
+  }
+
+  &-col-60 {
+    float: left;
+    width: 60%;
+    min-width: 200px;
+    margin: 20px 20px 0 0;
+  }
+
+  &-col-100 {
+    float: left;
+    width: 100%;
+    min-width: 200px;
+    margin: 20px 0 0 0;
+  }
+
+
+  &-col-200 {
+    float: left;
+    width: 200px;
+    min-width: 200px;
+    margin: 15px 20px 0 0;
+  }
+  &-col-300 {
+    float: left;
+    width: 280px;
+    min-width: 200px;
+    margin: 15px 20px 0 0;
+  }
+  &-col-400 {
+    float: left;
+    width: 400px;
+    min-width: 200px;
+    margin: 15px 20px 0 0;
+  }
+
+  &-col-500 {
+    float: left;
+    width: 500px;
+    min-width: 200px;
+    margin: 15px 20px 0 0;
+  }
+
+  &-col-600 {
+    float: left;
+    width: 600px;
+    min-width: 200px;
+    margin: 15px 20px 0 0;
+  }
+
+  &-col-700 {
+    float: left;
+    width: 770px;
+    min-width: 200px;
+    margin: 15px 15px 0 0;
+  }
+
+  &-col-800 {
+    float: left;
+    width: 800px;
+    min-width: 200px;
+    margin: 15px 15px 0 0;
+  }
+  &-col-900 {
+    float: left;
+    width: 900px;
+    min-width: 200px;
+    margin: 15px 15px 0 0;
+  }
+
+  &-col-55 {
+    float: left;
+    width: 55%;
+    margin: 15px 15px 0 0;
+  }
+
+  &-col-65 {
+    float: left;
+    width: 65%;
+    margin: 15px 15px 0 0;
+  }
+
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin: 15px 15px 0 0;
+  }
+
+}
+
