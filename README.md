@@ -68,14 +68,14 @@ Deletion last 1000 items, ms        |   51-52 ms          |   235-240 ms    |  7
 
 **Firefox**
 
-Library                             | WF  | Angular v.11    | VueJS v3         | Svelte v3
-:-----                              | :----:             | :-----:         |  :----:          | :----:
-1. Insertion from 0, 1000 items     |   75-85 ms         |   82-86 ms      |  1680-1707 ms    |  77-79 ms
-2. Deletion from 0, 1000 items, ms  |   28-36 ms         |   32-38 ms      |  36-42 ms        |  32-36 ms
-3. Insertion from 2, 1000 items, ms |   76-78 ms         |   64-71 ms      |  1520-1730 ms    |  72-76 ms
-4. Deletion from 2, 1000 items, ms  |   34-38 ms         |   30-38 ms      |  35-39 ms        |  24-29 ms
-5. Appending 1000 items, ms         |   77-78 ms         |   77-78 ms      |  75-77 ms        |  72 ms
-6. Deletion last 1000 items, ms     |   35-40 ms         |   45-48 ms      |  37-40 ms        |  33 ms
+Library                             | WF                  | Angular v.11    | VueJS v3         | Svelte v3
+:-----                              | :----               | :-----          |  :----           | :----
+Insertion from 0, 1000 items        |   75-85 ms          |   82-86 ms      |  1680-1707 ms    |  77-79 ms
+Deletion from 0, 1000 items, ms     |   28-36 ms          |   32-38 ms      |  36-42 ms        |  32-36 ms
+Insertion from 2, 1000 items, ms    |   76-78 ms          |   64-71 ms      |  1520-1730 ms    |  72-76 ms
+Deletion from 2, 1000 items, ms     |   34-38 ms          |   30-38 ms      |  35-39 ms        |  24-29 ms
+Appending 1000 items, ms            |   77-78 ms          |   77-78 ms      |  75-77 ms        |  72 ms
+Deletion last 1000 items, ms        |   35-40 ms          |   45-48 ms      |  37-40 ms        |  33 ms
 
 As a result **WF** engine has a great performance during working with iterable items, especially in the Chrome/Brave browser. We did some investigations to found out the most effective algorithm with insertion the nodes inside the DOM model. The most modern framework for inserting new records to the list of data or tables, just made insertion of the new DOM node inside the existed DOM model. And in case if table has a lot of items that leads to overload the browser engine and decreases overall performance of application. **WF** uses another algorithm: each existed node will be appended with a new data, in other words, at first we provide a reconciling data an existing nodes in the DOM and at the end **WF** will append the table all necessary items. As a result such reconciling makes a shifting data to end of the table. That works much faster. That's interesting, the same algorithm also uses SvelteJS, but in the Chrome it works much slower in comparing with **WF**, instead in the Firefox it works slightly faster. In our opinion VueJS has a bug, because during inserting data entire the table it works very slow in any browser, insertion of 5000 items in the Firefox took 42 seconds! 
 
