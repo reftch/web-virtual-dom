@@ -59,12 +59,12 @@ This topic is very important, because every approaches have strongest and weakne
 
 Library                             | WF                  | Angular v.11    | VueJS v3          | Svelte v3
 :-----                              | :----               | :-----          | :----             | :----
-1. Insertion from 0, 1000 items     |   73-85 ms          |   210-220 ms    |  780-790 ms       |  200 ms
-2. Deletion from 0, 1000 items, ms  |   45-50 ms          |   220-230 ms    |  75-80 ms         |  60 ms
-3. Insertion from 2, 1000 items, ms |   73-85 ms          |   225-235 ms    |  720-730 ms       |  190 ms
-4. Deletion from 2, 1000 items, ms  |   51-55 ms          |   235-240 ms    |  75-79 ms         |  62 ms
-5. Appending 1000 items, ms         |   95-105 ms         |   215-220 ms    |  85-95 ms         |  200 ms
-6. Deletion last 1000 items, ms     |   51-52 ms          |   235-240 ms    |  75-79 ms         |  65 ms
+Insertion from 0, 1000 items        |   73-85 ms          |   210-220 ms    |  780-790 ms       |  200 ms
+Deletion from 0, 1000 items, ms     |   45-50 ms          |   220-230 ms    |  75-80 ms         |  60 ms
+Insertion from 2, 1000 items, ms    |   73-85 ms          |   225-235 ms    |  720-730 ms       |  190 ms
+Deletion from 2, 1000 items, ms     |   51-55 ms          |   235-240 ms    |  75-79 ms         |  62 ms
+Appending 1000 items, ms            |   95-105 ms         |   215-220 ms    |  85-95 ms         |  200 ms
+Deletion last 1000 items, ms        |   51-52 ms          |   235-240 ms    |  75-79 ms         |  65 ms
 
 **Firefox**
 
