@@ -11,6 +11,18 @@
   box-sizing: border-box;
 }
 
+* {
+  user-select: none;
+}
+
+*::selection {
+  background: none;
+}
+
+*::-moz-selection {
+  background: none;
+}
+
 body {
   margin: 0;
   padding: 8px;
@@ -268,4 +280,11 @@ span:after {
 
 .widget .chart {
   padding: 0px 20px 20px 20px;
+}
+
+h3 {
+  font-size: 18x;
+  font-weight: 600;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }

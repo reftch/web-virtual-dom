@@ -280,7 +280,7 @@ export class BaseComponent extends HTMLElement implements VComponent {
       if (h) {
         const output = String(h.output);
         this[`${h.input}`] = 
-          h.isStatic ? h.output : h.component[`${output}`]; 
+          h.isStatic ? h.output : h.component[`${output}`];
       }      
     })
   }

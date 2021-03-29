@@ -16,10 +16,12 @@
     border-radius: 3px;
     margin-right: 20px;
     color: var(--primary);
+    border: 1px solid var(--background-button-primary);
     background-color: var(--background-button-primary);
     
     &:hover {
       background-color: var(--background-button-hover);
+      @include regular-shadow;
     }
     
     &-disabled {
@@ -31,17 +33,13 @@
   &-secondary {
     cursor: pointer;
     border-radius: 3px;
-    border: 1px solid var(--selected);
+    border: 1px solid var(--background-button-primary);
 
     &:hover {
       background-color: var(--hover);
+      border: 1px solid var(--background-button-hover);
+      @include regular-shadow;
     }
   }
-  // &-primary:hover {
-  // }
 
-  // &-text:hover {
-  //   background-color: var(--hover);
-  //   @include big-shadow;
-  // }
 }

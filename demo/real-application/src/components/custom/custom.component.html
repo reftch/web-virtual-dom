@@ -1,3 +1,57 @@
 <div id="custom">
-  <wf-button :title="Button" :primary="true"></wf-button>
+  <h3>Emitting data from child to parent</h3>
+
+  <div style="width:250px; overflow:hidden; padding-bottom: 5px;">
+	  <div style="float:left; white-space:nowrap;" >
+      <wf-button :title="Increment" :primary="true" @click="incCounter"></wf-button>
+	  </div>
+	  <div style="float:left; white-space:nowrap;" >
+      <wf-button :title="Decrement" :secondary="true" @click="decCounter"></wf-button>
+	  </div>
+	</div>
+
+  <div>
+    Current count state: {{ count }}
+  </div>
+
+  <h3>Passing data from parent to child</h3>
+  <div>
+    Current passing data from the parent element: {{ parentVariable }}
+  </div>
+
+  <h3>Conditional rendering</h3>
+
+  <div style="width:250px; overflow:hidden; padding-bottom: 5px;">
+	  <div style="float:left; white-space:nowrap;" >
+      <wf-button :title="button-title" :primary="true" @click="toggle"></wf-button>
+	  </div>
+	</div>
+
+  <div>
+    Current isEnabled state: {{ isEnabled }}
+  </div>
+
+  <div :style="{{ isEnabled ? 'color: red;' : 'color: green'}}">Conditional styling: {{ isEnabled ? 'color: red;' : 'color: green'}}</div>
+
+  <div :if="isEnabled">This DIV displays only if isEnabled === true</div>
+  <div :else>This is next DIV element, it contains :else directive</div>
+  
+  <div>
+    <div>
+      <div :if="!isEnabled">
+        <div>Another div elements with directive :if="!isEnabled"</div>
+        <div>Another div elements with directive :if="!isEnabled"</div>
+        <div>Another div elements with directive :if="!isEnabled"</div>
+        <div>Another div elements with directive :if="!isEnabled"</div>
+        <div>Another div elements with directive :if="!isEnabled"</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Javascript expressions</h3>
+
+  {{ isEnabled ? 'YES' : 'NO' }}
+  
+  Calculating ((var1-var2)/2 + 1): {{ (var1 - var2)/2 + 1 }}
+
 </div>

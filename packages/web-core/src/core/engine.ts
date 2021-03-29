@@ -294,7 +294,7 @@ export class VirtualEngine implements VEngine {
             }
           }
           const dynamicAttr = el.getAttribute(`:${attribute}`);
-          if (dynamicAttr && props.indexOf(dynamicAttr) !== -1) {
+          if (dynamicAttr && props.includes(dynamicAttr)) {
             value += ` ${this.component[dynamicAttr]}`;
             el.setAttribute(attribute, value.trim());
           } else {

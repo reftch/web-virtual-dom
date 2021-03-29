@@ -12,7 +12,8 @@ export default class CustomComponent extends BaseComponent implements VComponent
   @Prop() message = this.store.getters().getMessage();
   
   @Prop() count = this.store.getters().getCount();
-  
+  @Prop() count1 = 0;
+
   @Prop() rawHTML = '<strong>HTML</strong>';
   @Prop() buttonStyle = 'border-radius: 8px;';
   @Prop() customClass = "custom-element-class";
@@ -29,25 +30,26 @@ export default class CustomComponent extends BaseComponent implements VComponent
   onMounted() {
     this.count = this.parentVariable;
 
-    // setInterval(() => {
-    //   this.count++;
-    //   this.emit('setRow', this.count);
-    // }, 1000)
+    setInterval(() => {
+      this.emit('setRow', ++this.count1);
+    }, 1000)
   }
 
   incCounter = () => {
     this.count++;
+    this.var1++;
     this.textStyle = 'color: blue;';
     this.store.actions().setCount(this.count);
-    this.emit('setRow', this.count);
+    // this.emit('setRow', this.count);
     this.emit('setRow3', this.count);
     this.textStyle = 'color: red;';
   }
 
   decCounter = () => {
+    this.var1--;
     this.textStyle = 'color: green;';
     this.store.actions().setCount(--this.count);
-    this.emit('setRow', this.count);
+    // this.emit('setRow', this.count);
     this.emit('setRow3', this.count);
     this.textStyle = 'color: green;';
   }
