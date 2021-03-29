@@ -26,13 +26,20 @@ export default class CustomComponent extends BaseComponent implements VComponent
   @Prop() parentVariable = 0;
 
   t0: number = 0;       
+  timerId: NodeJS.Timeout | undefined = undefined;
 
   onMounted() {
     this.count = this.parentVariable;
 
-    setInterval(() => {
+    this.timerId = setInterval(() => {
       this.emit('setRow', ++this.count1);
     }, 1000)
+  }
+
+  onUnmounted() {
+    if (this.timerId) {
+      clearInterval(this.timerId);
+    }
   }
 
   incCounter = () => {
