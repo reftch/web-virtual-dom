@@ -11,12 +11,12 @@
 	</div>
 
   <div>
-    Current count state: {{ count }}
+    Current count state: <strong>{{ count }}</strong>
   </div>
 
   <h3>Passing data from parent to child</h3>
   <div>
-    Current passing data from the parent element: {{ parentVariable }}
+    Current passing data from the parent element: <strong> {{ parentVariable }} </strong>
   </div>
 
   <h3>Conditional rendering</h3>
@@ -28,7 +28,7 @@
 	</div>
 
   <div>
-    Current isEnabled state: {{ isEnabled }}
+    Current isEnabled state: <strong> {{ isEnabled }} </strong>
   </div>
 
   <div :style="{{ isEnabled ? 'color: red;' : 'color: green'}}">Conditional styling: {{ isEnabled ? 'color: red;' : 'color: green'}}</div>
@@ -51,11 +51,11 @@
   <h3>Javascript expressions</h3>
 
   <div>
-    <span>Javascript expression: (isEnabled ? 'YES' : 'NO')</span>{{ isEnabled ? 'YES' : 'NO' }}
+    <span>Javascript expression: (isEnabled ? 'YES' : 'NO'): </span><strong> {{ isEnabled ? 'YES' : 'NO' }}</strong>
   </div>
   
   <div>
-    Calculating ((var1-var2)/2 + 1): {{ (var1 - var2)/2 + 1 }}
+    Calculating ((var1-var2)/2 + 1): <strong> {{ (var1 - var2)/2 + 1 }}</strong>
   </div>
 
 </div>
