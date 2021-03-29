@@ -54,7 +54,7 @@ Another good tutorial about Web components you can find reading a number of exce
 
 ## Demo application
 
-You can find a real demo application, base on this framework [Here](https://web-virtual-dom.vercel.app).
+You can find a real demo application based on this framework [here](https://web-virtual-dom.vercel.app). This application demonstrates all main features, which are already implemented on it.
 
 ## Performance comparison
 
