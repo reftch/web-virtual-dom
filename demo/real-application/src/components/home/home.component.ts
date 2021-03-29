@@ -8,8 +8,8 @@ import CustomComponent from '../custom/custom.component';
   template: `
     <div id="home-component">
       <h3>Parent component</h3>
-      <div>Emitted timer count from the child component: {{ var112 }}</div>
-      <div>Emitted count variable from the child component: {{ var111 }}</div>
+      <div>Emitted timer count from the child component: <strong>{{ var112 }}</strong></div>
+      <div>Emitted count variable from the child component: <strong>{{ var111 }}</strong></div>
       <custom-component :parent-variable="var111" @set-row="emitSetRow" @set-row3="emitSetRow3"></custom-component>
     </div>`,
   components: [ CustomComponent, ButtonComponent ]
