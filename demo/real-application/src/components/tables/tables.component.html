@@ -1,9 +1,9 @@
 <div id="custom">
-  <h1>WF table</h1>
+  <h3>Work with an iterable items from array</h3>
 
   <div style="width: 170px; display:inline-block;"> 
     <span style="display: inline; float:left;"> 
-      <wf-button :title="Add" :primary="true" @click="incCounter"></wf-button>
+      <wf-button :title="Insert" :primary="true" @click="incCounter"></wf-button>
     </span>  
     <span style="display: inline; float:right;"> 
       <wf-button :title="Delete" :secondary="true" @click="decCounter"></wf-button>
@@ -18,6 +18,8 @@
   </div>
 
   <br><br>
+
+  <h3>Work with an iterable objects</h3>
 
   <div :for="i in item">
     <div>
